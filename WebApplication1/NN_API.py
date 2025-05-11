@@ -4,7 +4,7 @@ import requests
 
 def ask(text):
     prompt = {
-        "modelUri": "gpt://b1g2kgtu7de8nnc06bki/yandexgpt-lite",
+        "modelUri": "gpt://<FILE-PATH>/yandexgpt-lite",
         "completionOptions": {
             "stream": False,
             "temperature": 0.6,
@@ -25,7 +25,7 @@ def ask(text):
     url = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Api-Key AQVN0fEqdKE98QzMz94LWn9uoGsek2GzJi0A5WiZ"
+        "Authorization": "Api-Key <API-TOKEN>"
     }
 
     response = requests.post(url, headers=headers, json=prompt)
